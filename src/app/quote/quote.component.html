@@ -1,0 +1,26 @@
+<div class="container">
+
+  <h1>Famous Quotes</h1>
+    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+  
+  <div *ngFor='let quote of quotes;let i=index'>
+    <div class="row">
+    <div id="buttons">
+  
+  
+    <br>
+    <li id="h3">{{quote.name}} <li id = "poster">Posted on: {{quote.quoteDate|date}}</li><br>
+      <button class = "btn btn-success" (click)='toogleDetails(i)'>Toogle Details</button>
+    &nbsp;&nbsp;
+  
+    <button (click)='upvote(i)' class=""><i class="btn btn-warning" ></i>  {{quote.upvotes}}</button>
+    &nbsp;&nbsp;
+  
+    <button (click)='downvote(i)' class=""><i class="btn btn-warning"></i>  {{quote.downvotes}} </button>
+    <br>
+  
+      <app-quote-details *ngIf="quote.showAuthor" [quote]='quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
+      </div>
+  
+  </div>
+  </div>
