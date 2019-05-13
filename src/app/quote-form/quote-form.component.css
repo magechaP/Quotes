@@ -1,6 +1,9 @@
 #quotes{
-    color: green;
+    color: yellow;
 }
 #author{
     color: green;
+  }
+  #submitby{
+    color: blue;
   }
