@@ -6,7 +6,7 @@ import {Quote} from '../quote'
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-
+//quote input in the quote form//
     quotes = [
       new Quote(1,"Who so neglects learning in his youth loses his past,and is dead to the future.","Author:Euripides","Yang Lanti",0,0,new Date(2018,12,21)),
       new Quote(2,"Only a man who felt ultimate despair is capable of feeling ultimate bliss.","Author:Alexandre Dumas","Octopizzo",0,0,new Date(2017,8,2)),
