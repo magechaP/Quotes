@@ -31,6 +31,7 @@ export class QuoteComponent implements OnInit {
 downvote(index){
  this.quotes[index].downvotes++;
 }
+//logic for deleting quotes
 deleteQuote(isComplete,index){
  if (isComplete){
    let toDelete=confirm(`You sure you want to delete this? ${this.quotes[index].name}`)
